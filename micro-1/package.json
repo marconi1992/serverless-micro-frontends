@@ -1,0 +1,37 @@
+{
+  "name": "micro-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "offline": "sls offline start",
+    "build": "webpack --mode development client/webpack.config.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-airbnb": "^2.5.3",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-import-resolver-webpack": "^0.11.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "serverless": "^1.38.0",
+    "serverless-dotenv-plugin": "^2.0.1",
+    "serverless-offline": "^4.6.0",
+    "serverless-webpack": "^5.2.0",
+    "vue-loader": "^15.6.4",
+    "vue-server-renderer": "^2.6.7",
+    "vue-template-compiler": "^2.6.7",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "hypernova": "^2.5.0",
+    "hypernova-lambda": "^1.0.1",
+    "hypernova-vue": "^1.0.0",
+    "vue": "^2.6.8",
+    "vuex": "^3.1.0"
+  }
+}
