@@ -15,5 +15,7 @@ export const search = (term, page, per_page = 8) => axios.get('https://api.githu
     return data.items.map(item => ({
       id: item.id,
       name: item.name,
+      imageUrl: item.owner.avatar_url,
+      description: item.description,
     }));
   });
