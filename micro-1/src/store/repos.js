@@ -12,7 +12,7 @@ export default {
     },
   }),
   actions: {
-    async search({ commit }, { term, page, size }) {
+    async search({ commit }, { term, page = 1, size = 8 }) {
       const repos = await RepoProvider.search(term, page, size);
       commit('pushItems', repos);
       commit('setMetaSearch', {

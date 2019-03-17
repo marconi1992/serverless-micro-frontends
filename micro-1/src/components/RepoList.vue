@@ -15,11 +15,15 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 export default {
+  props: ['term'],
+  serverPrefetch () {
+    return this.search({ term: this.term })
+  },
   computed: {
     ...mapState('repos', ['items'])
   },
   methods: {
-    ...mapActions('repos', ['loadMore'])
+    ...mapActions('repos', ['loadMore', 'search'])
   }
 }
 </script>

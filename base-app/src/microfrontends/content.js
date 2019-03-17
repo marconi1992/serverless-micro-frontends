@@ -2,15 +2,21 @@ const axios = require('axios');
 
 const contentUrl = process.env.CONTENT_MICRO_URL;
 
-module.exports = (term, page = 1) => axios.post(`${contentUrl}/batch`, {
+module.exports = term => axios.post(`${contentUrl}/batch`, {
   content: {
     name: 'RepoList',
     data: {
       term,
-      page,
+    },
+  },
+  defaultContent: {
+    name: 'RepoList',
+    data: {
+      term: 'Hypernova',
     },
   },
 }).then((res) => {
   const { data } = res;
-  return data.results.content.html;
+  const { results } = data;
+  return Object.keys(results).map(key => results[key].html);
 });

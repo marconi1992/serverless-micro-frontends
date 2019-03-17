@@ -31,7 +31,7 @@
     "axios": "^0.18.0",
     "hypernova": "^2.5.0",
     "hypernova-lambda": "^1.0.1",
-    "hypernova-vue": "^1.1.0",
+    "hypernova-vue": "^2.0.0",
     "vue": "^2.6.8",
     "vuex": "^3.1.0"
   }
