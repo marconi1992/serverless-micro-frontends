@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 import hypernova from 'hypernova-lambda';
-import { renderVue, Vue } from 'hypernova-vue';
+import { renderVuex, Vue } from 'hypernova-vue';
 import createStore from './store';
 import RepoList from './components/RepoList';
 
@@ -14,7 +14,7 @@ const getComponent = async (name, context) => {
       ...RepoList,
       store,
     });
-    return renderVue(name, component);
+    return renderVuex(name, component);
   }
   return null;
 };

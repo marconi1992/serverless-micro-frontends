@@ -9,14 +9,17 @@
         </div>
       </div>
     </div>
-    
+    <a @click="loadMore" class="button">Load More</a>
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 export default {
   computed: {
     ...mapState('repos', ['items'])
+  },
+  methods: {
+    ...mapActions('repos', ['loadMore'])
   }
 }
 </script>
