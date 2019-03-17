@@ -1,5 +1,6 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const Dotenv = require('dotenv-webpack');
 
 const client = {
   target: 'web',
@@ -28,6 +29,7 @@ const client = {
   },
   plugins: [
     new VueLoaderPlugin(),
+    new Dotenv(),
   ],
 };
 

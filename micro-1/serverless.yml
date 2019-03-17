@@ -61,11 +61,18 @@ provider:
 
 functions:
   batch:
-    handler: src/index.handler
+    handler: src/batch.handler
     events:
       - http:
           path: batch
           method: POST
+  repos:
+    handler: src/repos.handler
+    events:
+      - http:
+          path: repos
+          method: GET
+          cors: true
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

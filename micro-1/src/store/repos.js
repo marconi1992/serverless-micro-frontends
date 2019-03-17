@@ -1,4 +1,6 @@
-import * as RepoProvider from '../services/repos';
+import axios from 'axios';
+
+const reposURL = process.env.REPOS_URL;
 
 /* eslint-disable no-param-reassign */
 export default {
@@ -13,7 +15,13 @@ export default {
   }),
   actions: {
     async search({ commit }, { term, page = 1, size = 8 }) {
-      const repos = await RepoProvider.search(term, page, size);
+      const repos = await axios.get(reposURL, {
+        params: {
+          term,
+          page,
+          size,
+        },
+      }).then(res => res.data);
       commit('pushItems', repos);
       commit('setMetaSearch', {
         term,

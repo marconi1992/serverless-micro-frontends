@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "offline": "sls offline start",
+    "offline": "NODE_ENV=local sls offline start",
     "build": "webpack --mode production --config ./client/webpack.config.js",
     "postbuild": "aws s3 sync client/dist s3://hypernova-serverless --acl public-read"
   },
@@ -12,6 +12,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-airbnb": "^2.5.3",
+    "dotenv-webpack": "^1.7.0",
     "eslint": "^5.14.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-import-resolver-webpack": "^0.11.0",
