@@ -1,4 +1,3 @@
-/* eslint-disable global-require */
 import hypernova from 'hypernova-lambda';
 import { renderVuex } from 'hypernova-vue';
 import createStore from './store';

@@ -4,7 +4,7 @@
       <div class="column is-3" v-for="item in items" :key="item.id">
         <div class="card">
           <div class="card-content">
-            <div class="media">
+            <a class="media" :href="item.url">
               <div class="media-left">
                 <figure class="image is-48x48">
                   <img :src="item.imageUrl" :alt="item.name">
@@ -13,7 +13,7 @@
               <div class="media-content">
                 <p class="title is-4">{{item.name}}</p>
               </div>
-            </div>
+            </a>
             <div class="content">
               {{item.description}}
             </div>
