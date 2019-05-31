@@ -29,7 +29,7 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "hypernova": "^2.5.0",
     "hypernova-lambda": "^1.0.1",
     "hypernova-vue": "^2.0.0",
